@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 
-## @package my package
+## 
 # \file action_client.py
 # \brief This script sends goals to an action server and publishes the position and velocity of the robot on a custom topic.
 # \author Andrea Bolla
