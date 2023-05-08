@@ -10,6 +10,8 @@ In this assignment, I developed, by using **ROS**, three nodes and the lauch fil
 -  Create a launch file to start the whole simulation. Set the value for the frequency with which node (C) publishes
 the information.
 
+# Doxygen Documentation
+
 
 # Nodes
 There are six nodes in the package:
