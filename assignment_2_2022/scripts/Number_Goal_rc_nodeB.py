@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 
-## @package my package
+## 
 # \file action_client.py
 # \brief  This script implements a ROS node that provides a service to count the number of goals that are reached and canceled.
 # \author Andrea Bolla
