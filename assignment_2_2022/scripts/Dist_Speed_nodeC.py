@@ -16,7 +16,7 @@ import select
 from assignment_2_2022.msg import Pos_and_Vel
 
 
-## @package my package
+## 
 # \file dist_speed.py
 # \brief This code subscribes to the '/pos_and_vel' topic and calculates the distance and average speed to the desired position.
 # \author Andrea Bolla
