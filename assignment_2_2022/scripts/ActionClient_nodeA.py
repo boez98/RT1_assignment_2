@@ -1,15 +1,16 @@
 #! /usr/bin/env python
 
-## 
-# \file action_client.py
-# \brief This script sends goals to an action server and publishes the position and velocity of the robot on a custom topic.
-# \author Andrea Bolla
-# \version 0.1 
-# \date 24/02/2023
+## @package assignment_2_2022
+#\file action_client.py
+#\brief This script sends goals to an action server and publishes the position and velocity of the robot on a custom topic.
+#\author Andrea Bolla
+#\version 0.1 
+#\date 24/02/2023
 #
-# \details This script initializes a ROS node and sets up a publisher to the "/pos_and_vel" topic to publish the position and velocity
+#\details This script initializes a ROS node and sets up a publisher to the "/pos_and_vel" topic to publish the position and velocity
 # of the robot. It also sets up a subscriber to the "/odom" topic to receive the robot's position and velocity. Finally, it
 # sends goals to an action server upon receiving keyboard input.
+#
 #
 
 import rospy
@@ -34,13 +35,15 @@ from assignment_2_2022.msg import Pos_and_Vel
 def callback(msg):
 
     ##
-    # \brief Callback function for the Odometry subscriber.
+    #\brief Callback function for the Odometry subscriber.
     #
     # This function is called every time a message is received on the "/odom" topic. It extracts the robot's position and linear
     # velocity, creates a custom message, and publishes it to the "/pos_and_vel" topic.
     #
-    # \param msg The message received from the "/odom" topic.
+    #\param msg The message received from the "/odom" topic.
     #
+    #
+
     global pub
  
     # Get the position 
@@ -65,11 +68,13 @@ def callback(msg):
 def Client():
 
     ##
-    # \brief Client function that sends goals to the action server.
+    #\brief Client function that sends goals to the action server.
     #
     # This function sends goals to an action server upon receiving keyboard input. It waits for the server to start up and listen
     # for goals before sending a goal. It cancels the goal if the user enters "c" and the robot is reaching the goal position.
     #
+    #
+
     
     # Creates the SimpleActionClient, passing the type of the action to the constructor.
     client = actionlib.SimpleActionClient('/reaching_goal', assignment_2_2022.msg.PlanningAction)
@@ -115,8 +120,10 @@ def Client():
       
 def main():
     ##
-    # \brief Main function that initializes the node, sets up the publisher and subscriber, and starts the client.
+    #\brief Main function that initializes the node, sets up the publisher and subscriber, and starts the client.
     #
+    #
+    
     global pub
     
     try:

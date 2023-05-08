@@ -1,5 +1,16 @@
 #! /usr/bin/env python
 
+## @package assignment_2_2022
+#\file dist_speed.py
+#\brief This code subscribes to the '/pos_and_vel' topic and calculates the distance and average speed to the desired position.
+#\author Andrea Bolla
+#\version 0.1 
+#\date 24/02/2023
+#
+#\details The desired position is set as parameters in the '/rosparam' server with names 'des_pos_x' and 'des_pos_y'. The frequency of the code can be set as a parameter in the '/rosparam' server with name '/set_frequency'.
+#
+#
+
 import rospy
 from geometry_msgs.msg import Point, Pose, Twist
 from sensor_msgs.msg import LaserScan
@@ -16,24 +27,16 @@ import select
 from assignment_2_2022.msg import Pos_and_Vel
 
 
-## 
-# \file dist_speed.py
-# \brief This code subscribes to the '/pos_and_vel' topic and calculates the distance and average speed to the desired position.
-# \author Andrea Bolla
-# \version 0.1 
-# \date 24/02/2023
-#
-# \details The desired position is set as parameters in the '/rosparam' server with names 'des_pos_x' and 'des_pos_y'. The frequency of the code can be set as a parameter in the '/rosparam' server with name '/set_frequency'.
-#
 
 
 def callback(msg):
 
 
     ##
-    # \brief This function is a callback function for the '/pos_and_vel' topic subscriber. It calculates the distance and average speed to the desired position.
+    #\brief This function is a callback function for the '/pos_and_vel' topic subscriber. It calculates the distance and average speed to the desired position.
     #
-    # \param msg A Pos_and_Vel message type containing the actual position and speed of the robot.
+    #\param msg A Pos_and_Vel message type containing the actual position and speed of the robot.
+    #
     #
 
     # Get the desired position
@@ -68,7 +71,8 @@ def callback(msg):
 def main():
 
     ##
-    # \brief This function initializes the node and subscribes to the '/pos_and_vel' topic.
+    #\brief This function initializes the node and subscribes to the '/pos_and_vel' topic.
+    #
     #
 
     # Initializes a rospy node
