@@ -13,7 +13,7 @@ the information.
 # Doxygen Documentation
 The project documentation, generated with Doxygen can be found in the following link:
 
-boez98.github.io/RT1_assignment_2/assignment_2_2022/docs/html/files.html.html
+boez98.github.io/RT1_assignment_2/assignment_2_2022/index.html
 
 # Nodes
 There are six nodes in the package:
