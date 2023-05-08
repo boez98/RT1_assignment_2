@@ -1,5 +1,15 @@
 #! /usr/bin/env python
 
+## @package assignment_2_2022
+#\file action_client.py
+#\brief  This script implements a ROS node that provides a service to count the number of goals that are reached and canceled.
+#\author Andrea Bolla
+#\version 0.1 
+#\date 24/02/2023
+#
+#
+
+
 import rospy
 from geometry_msgs.msg import Point, Pose, Twist
 from sensor_msgs.msg import LaserScan
@@ -25,6 +35,13 @@ num_r = 0;
 
 
 def callback(msg):
+    ##
+    #\brief Callback function to get the status of the /reaching_goal/result topic and update the counters.
+    #
+    #\param msg A message containing the status of the goal.
+    #
+    #
+
 
     global num_c, num_r
 
@@ -42,13 +59,24 @@ def callback(msg):
 
 
 def update_n_goal(req):
-    
+    ##
+    #\brief Function that updates the counter and returns the number of goals reached and canceled.
+    #
+    #\param req A request message containing no data.
+    #\return A response message with the number of goals reached and canceled.
+    #
+    #
+
     return  Num_Goal_rcResponse(num_r, num_c)
 
 
 
 def main():
-	
+    ##
+    #\brief Main function that initializes the node, sets up the publisher and subscriber, and starts the client.
+    #
+    #
+
     # Initialize the node
     rospy.init_node('n_goal_rc_server')
 	
