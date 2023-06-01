@@ -11,7 +11,7 @@ In this assignment, I developed, by using **ROS**, three nodes and the lauch fil
 the information.
 
 # Doxygen Documentation
-The project documentation: https://boez98.github.io/RT1_assignment_2/html/md__r_e_a_d_m_e.html
+The project documentation: https://boez98.github.io/RT1_assignment_2/html/
 
 # Nodes
 There are six nodes in the package:
